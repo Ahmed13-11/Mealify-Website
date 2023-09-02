@@ -1,0 +1,479 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Header */
+.header {
+    background-color: #EEEEEE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+/* Navbar */
+.navbar {
+    text-align: center;
+    padding: 10px 0;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 8%;
+    z-index: 9999;
+}
+.navcontainer {
+    align-items: baseline;
+    justify-content: space-around;
+}
+.navcontainer, .sec-nav ul {
+    display: flex;
+}
+.sec-nav #Home {
+    text-decoration: underline;
+    text-decoration-color: red;
+}
+.sec-nav ul {
+    justify-content: space-around;
+}
+.fir-nav, .moon {
+    width: 10%;
+}
+.sec-nav {
+    width: 30%;
+}
+.navcontainer, .sec-nav ul li {
+    list-style-type: none;
+}
+.navbar a{
+    text-decoration: none;
+}
+/* Second part in header */
+.Home {
+    width: 100%;
+}
+.home-contain {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.home-img {
+    width: 40%;
+}
+.home-writing {
+    width:35%;
+}
+.home-img img {
+    width: 100%;
+    filter: drop-shadow(10px 10px 10px #000);
+    transition: transform 0.3s ease-in-out;
+}
+.home-writing h2 {
+    font-size: 50px;
+    font-weight:700;
+}
+.home-writing p {
+    font-size: 16px;
+    margin: 20px 0;
+}
+.home-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 40px;
+}
+.home-buttons a{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    width: 30%;
+    text-align: center;
+    color: black;
+}
+.home-buttons a i {
+    margin-right: 10px;
+}
+.home-buttons #Booking {
+    border-radius: 0 30px 30px 30px;
+    background-color: red;
+    padding: 10px 10px;
+    color: white;
+}
+.home-buttons #Watching {
+    width: 40%;
+    padding: 10px 10px;
+}
+.home-img img:hover {
+    animation: shake 0.5s infinite;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateX(-3px);
+    }
+    50% {
+        transform: translateY(3px);
+    }
+    75% {
+        transform: translateY(-3px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Second */
+.sec-contain {
+    width: 85%;
+    margin: auto;
+    padding: 40px 0;
+}
+.sec-writing, .gallery-writing, .contact-writing {
+    text-align: center;
+}
+.sec-writing h2, .gallery-writing h2, .contact-writing h2 {
+    font-size: 15px;
+    color: rgb(84, 78, 78);
+}
+.sec-writing p, .gallery-writing p, .contact-writing p {
+    font-size: 45px;
+}
+.sec-writing p span, .gallery-writing span, .contact-writing span {
+    color: red;
+}
+.sec-img {
+    margin: 50px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.contain-img {
+    width: 32%;
+    border-radius: 10px;
+    box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.box-writing {
+    margin: 20px;
+}
+.box-img {
+    position: relative;
+}
+.box-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.box-img svg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+.sec-contain .box-writing {
+    text-align: center;
+    color: rgb(84, 78, 78);
+}
+.sec-contain .box-writing h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+.sec-contain .box-writing span {
+    display: inline-block;
+    margin: 10px 0;
+}
+.social-box {
+    position: absolute;
+    top: 20px;
+    right: -40px;
+    opacity: 0;
+    transition: 1s;
+    background-color: rgba(247, 244, 244, 0.4);
+    padding: 0 10px;
+    border-radius: 4px;
+}
+.contain-img:hover {
+    transform: scale(1.05);
+}
+.contain-img:hover .social-box {
+    opacity: 1;
+    right: 20px;
+}
+.social-box ul li {
+    list-style-type: none;
+    margin: 20px 0;
+}
+
+/* Second Section */
+.gallerysection {
+    background-color: #EEEEEE;
+}
+.gallery-writing {
+    padding: 100px 0 30px 0;
+}
+.gallery-imges {
+    width: 80%;
+    margin: auto;
+    padding-bottom: 80px;
+}
+.gallery-imgescontain {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    height: 70rem;
+}
+.boxing {
+    width: 32%;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+.boxing h3 {
+    font-size: 50px;
+    font-weight: 600;
+}
+.boxing p {
+    font-size: 25px;
+}
+.boxing img {
+    width: 100%;
+}
+.layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    text-align: center;
+    opacity: 0;
+    transition: 1s;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.boxing:hover .layer {
+    opacity: 1;
+    top: 0;
+}
+/* Section three */
+.contact-contain {
+    width: 80%;
+    margin: auto;
+    background-color: white;
+}
+.contact-writing {
+    padding: 100px 0 30px 0;
+    width: 100%;
+}
+.map iframe {
+    width: 100%;
+    height: 300px;
+}
+.information {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 50px 0;
+}
+.information .info {
+    width: 49%;
+    background-color: #EEEEEE;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    padding: 20px 40px;
+}
+.information .info h3 {
+    font-size: 30px;
+    font-family: 700;
+    padding-bottom: 10px;
+}
+.info .icon {
+    background-color: red;
+    padding: 15px;
+    border-radius: 100%;
+}
+.info .icon-writing a {
+    text-decoration: none;
+    color: black;
+}
+.data {
+    box-shadow: 0 0 1.875rem #00000014;
+    text-align: center;
+    margin-bottom: 100px;
+}
+.data .data-contain {
+    background-color: white;
+    width: 95%;
+    margin: auto;
+    padding: 30px 0;
+}
+.data-contain .dataname {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+}
+.data-contain .dataname input {
+    width: 50%;
+}
+.datasubject input, .datatext textarea {
+    width: 100%;
+}
+.datasubject input {
+    margin: 10px 0;
+}
+#myInput {
+    height: 5em;
+}
+#mytextarea {
+    resize: vertical;
+}
+#myInput, #mytextarea {
+    border: 1px solid rgb(239, 185, 185);
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+form button {
+    background-color: red;
+    color: white;
+    padding: 20px 40px;
+    border-radius: 40px;
+    margin-top: 40px;
+    font-size: 20px;
+}
+/* Footer */
+footer {
+    background-color: black;
+    color: white;
+}
+.foot-contain {
+    width:90%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 40px;
+}
+.foot-contain .box {
+    width: 25%;
+    margin: 80px 0;
+}
+.box2 {
+    flex-grow: 2;
+}
+.boxicon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+.boxicon img {
+    width: 10%;
+}
+.boxicon h2 {
+    font-size: 40px;
+    font-weight: 500;
+}
+.boxicon h2 span {
+    color: red;
+}
+.box1 p, .box2 p {
+    padding: 20px 0;
+    font-size: 20px;
+}
+.box1 h3 {
+    font-size: 30px;
+    text-align: center;
+}
+.box1 hr {
+    margin: 20px 0 30px 0;
+}
+.box1 ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.box2 h3 {
+    font-size: 30px;
+}
+.boxinput {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.boxinput input {
+    width: 70%;
+}
+.boxinput button {
+    width: 30%;
+    background-color: red;
+    padding: 20px 0;
+    font-size: 18px;
+}
+.boxinput button i {
+    margin-right: 5px;
+}
+#boxinput {
+    border: 1px solid rgb(239, 185, 185);
+    padding: 8px;
+    font-size: 20px;
+}
+#Imp {
+    margin: 20px 0;
+}
+.box2 ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 10px;
+}
+.box2 ul li {
+    width: 40%;
+}
+.box2 ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+}
+.box2 span {
+    font-weight: bold;
+}
+.box3 h3 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+.box3 ul li {
+    list-style-type: none;
+    font-size: 15px;
+    margin: 20px 0;
+}
+.box3 ul li i {
+    margin-right: 16px;
+}
